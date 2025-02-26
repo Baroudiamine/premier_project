@@ -1,51 +1,72 @@
-/* Reset default margin and padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
 }
-
-/* Body styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-    line-height: 1.6;
-}
-
-/* Header styles */
-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-/* Main section styles */
-main {
-    padding: 20px;
-}
-
-h2 {
-    color: #333;
-    margin-bottom: 10px;
-}
-
-ul {
-    list-style-type: none;
-}
-
-ul li {
-    margin: 8px 0;
-}
-
-/* Footer styles */
-footer {
-    background-color: #333;
+    background-color: #1a1a2e;
     color: white;
     text-align: center;
-    padding: 10px;
-    position: absolute;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0f3460;
+    padding: 15px 20px;
+    border-bottom: 4px solid #e94560;
+}
+.navbar .logo {
+    color: #e94560;
+    font-size: 24px;
+    font-weight: bold;
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+.navbar ul li {
+    margin: 0 15px;
+}
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+.navbar ul li a:hover {
+    color: #e94560;
+}
+.games-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+.game-card {
+    background-color: #0f3460;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #e94560;
+}
+.game-card img {
     width: 100%;
-    bottom: 0;
+    border-radius: 5px;
+}
+.game-card h3 {
+    margin-top: 10px;
+}
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+    .navbar ul {
+        margin-top: 10px;
+        flex-direction: column;
+    }
+    .navbar ul li {
+        margin: 10px 0;
+    }
 }
